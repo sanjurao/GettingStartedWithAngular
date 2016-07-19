@@ -1,0 +1,6 @@
+C:\D\Personal\Projects\GettingStartedWithAngular\GettingStartedWithAngular\bin\GettingStartedWithAngular.dll.config
+C:\D\Personal\Projects\GettingStartedWithAngular\GettingStartedWithAngular\bin\GettingStartedWithAngular.dll
+C:\D\Personal\Projects\GettingStartedWithAngular\GettingStartedWithAngular\bin\GettingStartedWithAngular.pdb
+C:\D\Personal\Projects\GettingStartedWithAngular\GettingStartedWithAngular\obj\Debug\GettingStartedWithAngular.csprojResolveAssemblyReference.cache
+C:\D\Personal\Projects\GettingStartedWithAngular\GettingStartedWithAngular\obj\Debug\GettingStartedWithAngular.dll
+C:\D\Personal\Projects\GettingStartedWithAngular\GettingStartedWithAngular\obj\Debug\GettingStartedWithAngular.pdb
