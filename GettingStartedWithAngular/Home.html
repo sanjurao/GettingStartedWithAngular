@@ -2,8 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <script src="Library/angular.js"></script>
+    <script src="Scripts/Examples.js"></script>
 </head>
-<body>
-    Welcome to Learning Angular JS step by step process. Lets ge started step by step 
+<body ng-app="MyExampleModule">
+    <div>
+        Welcome to Learning Angular JS step by step process. Lets ge started step by step
+    </div>
+    <br />
+    <div ng-controller="Example1Controller">
+        <b>Example 1 : </b>How to use modules and the scope properties - {{ Example1 }}
+        <br />
+    </div>
+    <div ng-controller="Example1Controller"><br/>
+        <b> Exampple 2:</b> How to use object employee given in the scope variable
+        <br />
+        Name :  {{ employee.name }} <br />
+        Skils:  {{ employee.skils}} <br />
+        Expirence :  {{ employee.exp}} <br />
+    </div>
+    <div ng-controller="Example1Controller"><br />
+        <b> Exampple 3:</b> How to use array of employee object using ng-repeate.    
+    </div>
 </body>
 </html>

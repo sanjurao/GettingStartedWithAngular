@@ -66,6 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Home.html" />
+    <Content Include="JqGridWithDateHyperLink.html" />
+    <Content Include="Library\angular.js" />
+    <Content Include="Library\angular.min.js" />
+    <Content Include="Scripts\Examples.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

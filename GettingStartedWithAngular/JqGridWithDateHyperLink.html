@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/base/jquery-ui.css" rel="stylesheet" />
+    <link href="http://trirand.com/blog/jqgrid/themes/ui.jqgrid.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://trirand.com/blog/jqgrid/js/jquery.jqGrid.min.js"></script>
+    <script src="http://trirand.com/blog/jqgrid/js/i18n/grid.locale-en.js"></script>
+    <script type="text/javascript">        
+        $(document).ready(function () {
+
+            var data = [{ 'Date': "<a href=https://google.com target=_blank style=text-decoration:underline;>2016-08-10T06:11:14.907Z</a>" },
+                 { 'Date': "<a href=https://example.com target=_blank style=text-decoration:underline;>2016-08-09T06:11:14.907Z</a>" },
+                 { 'Date': "<a href=https://w3school.com target=_blank style=text-decoration:underline;>2016-08-06T06:11:14.907Z</a>" },
+                 { 'Date': "2016-08-09T06:11:14.907Z" }, { 'Date': "2016-08-15T06:11:14.907Z" }
+            ]
+            $("#grid").jqGrid({
+                datatype: 'jsonstring',
+                datastr: data,
+                colNames: ["Date"],
+                colModel: [{ name: 'Date', sorttype: 'date', //formatter: 'date',//formatoptions: { newformat: 'n/j/Y' } 
+                    formatter: function (cellvalue, options, rowObject) {
+                        var dt=new Date(cellvalue);
+                        if(dt=='Invalid Date')return cellvalue;//chrome
+                        var y=dt.getFullYear();
+                        var m=dt.getMonth()+1<10?'0'+(dt.getMonth()+1):dt.getMonth()+1;
+                        var d=dt.getDate()<10?'0'+dt.getDate():dt.getDate();
+                        return y+'-'+m+'-'+d;
+                    },
+                    formatoptions: { newformat: 'n/j/Y' }
+                }],
+                //afterInsertRow : function(rowid, aData){
+                //if(){
+                //    $("#grid").jqGrid('setCell' ,rowid, 'Date', "<a href=https://google.com target=_blank style=text-decoration:underline;>"+aData.Date+"</a>", {});
+                //}
+            //}
+            });
+        });
+    </script>
+</head>
+<body>
+    <table id="grid"></table>
+</body>
+</html>
